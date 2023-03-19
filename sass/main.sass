@@ -1,0 +1,626 @@
+@import "vars"
+
+.body
+	font-family: $default-font
+	background-color: #f6f6f6
+	color: #0f1f1c
+
+.container
+	max-width: 1270px
+	margin: 0 auto
+	padding: 15px
+
+section
+	background-color: #f6f6f6
+
+.container-right
+	margin: 0 auto
+	padding-left: calc( (100% - 1270px)/2 + 15px)
+
+.none
+	display: none !important
+
+.btn
+	display: inline-block
+	font-family: $default-font
+	font-weight: 500
+	color: #fff
+	background: linear-gradient(129.54deg, #FF7B4E 15.57%, $accent-color 95.03%)
+	filter: drop-shadow(2px 4px 0.4rem rgba(237, 63, 64, 0.5))
+	&:active
+		position: relative
+		top: 2px
+		left: 2px
+
+	&:hover
+		color: #f34141
+		transition: color 0.2s ease-in
+
+// header
+
+.header
+	position: relative
+	min-height: 940px
+	padding-top: 44px
+	overflow: hidden
+
+	background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%)
+	&::after
+		content: ""
+		position: absolute
+		left: 0
+		bottom: 0
+
+		width: 100%
+		height: 96px
+		background-image: url("../img/header/header_vector.svg")
+
+		background-size: 100%
+
+	a
+		color: #fff
+		font-family: $default-font
+
+.heder__top
+	margin-bottom: 86px
+
+.header__row
+	display: flex
+
+.header__content
+	position: relative
+	z-index: 1
+	max-width: 592px
+
+.header__img
+	position: relative
+	flex-grow: 1
+	img
+		right: -60px
+		position: absolute
+		max-width: unset
+		width: 820px
+		height: 757px
+		pointer-events: none
+
+.animate--graphic
+	pointer-events: none
+	position: absolute
+	top: -50px
+	right: -30px
+	width: 830px
+	height: 622px
+
+	// NAV
+.nav
+	display: flex
+	justify-content: space-between
+	column-gap: 80px
+	align-items: center
+
+.nav__list
+	display: flex
+	column-gap: 80px
+	font-size: 15px
+	font-weight: 500
+	a
+		position: relative
+		&:hover
+			&::after
+				content: ""
+				position: absolute
+				display: block
+				bottom: -6px
+				left: 0
+				right: 10px
+				height: 4px
+				background-color: #e4d5d5
+				border-radius: 4px
+	.active
+		&:after
+			content: ""
+			position: absolute
+			display: block
+			bottom: -6px
+			left: 0
+			right: 10px
+			height: 4px
+			background-color: #e4d5d5
+			border-radius: 4px
+
+.nav__list--footer
+	a
+		&:hover
+			&::after
+				background-color: #FF7C4E
+
+.nav__login
+	display: flex
+	column-gap: 25px
+	align-items: center
+
+.nav__login--footer
+	column-gap: 65px
+
+.nav__toggle
+	display: none
+
+// BTN
+
+.btn_logo
+	padding: 13px 44px
+	border-radius: 100px
+
+// LOGO 
+
+.logo
+	a
+		font-weight: 700
+		font-family: $default-font
+		font-size: 28px
+
+.logo--footer
+	a
+		color: #FF7C4E
+
+	// Header content
+
+.header__badge
+	display: inline-block
+	font-family: $default-font
+	font-size: 18px
+	color: #fff
+	font-weight: 500
+	border-radius: 15px
+	background: rgba(255, 255, 255, 0.25)
+	padding: 12px 30px
+	margin-bottom: 7px
+
+.header__title
+	font-size: 55px
+	color: #fff
+	font-family: $default-font
+	margin-bottom: 30px
+
+.header__text
+	margin-bottom: 68px
+	font-family: $default-font
+	font-size: 25px
+	font-weight: 700
+	color: rgba(255, 255, 255, 0.5)
+
+.header__btn
+	// margin-bottom: 120px
+	padding: 26px 48px
+	font-size: 25px
+	font-weight: 700
+	border-radius: 27px
+
+	// DESTNATION
+
+.destination
+	padding: 96px 0 100px
+	overflow-x: hidden
+
+	&__row
+		display: flex
+		column-gap: 50px
+
+	&__content
+		max-width: 456px
+
+	&__slider
+		width: 1110px
+		flex-shrink: 0
+
+	&__title
+		margin-bottom: 15px
+		font-family: $default-font
+		font-size: 55px
+		font-weight: 600
+
+		span
+			font-size: 30px
+
+	&__text
+		margin-bottom: 60px
+		font-family: $default-font
+		font-size: 25px
+		font-weight: 500
+		color: $secondary
+
+	&__btn
+		font-size: 25px
+		padding: 25px 45px
+		border-radius: 27px
+
+// SLIDER
+
+.slider
+	position: relative
+	height: 456px
+
+	&__item
+		margin-top: 27px
+		width: 335px !important
+		height: 402px
+		object-fit: cover
+		border-radius: 35px
+		transition: 0.3s ease-out
+
+.slider .center .slider__item
+	margin-top: 0
+	width: 380px
+	height: 456px
+
+.slider__btn
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	z-index: 9
+
+	width: 68px
+	height: 68px
+	border-radius: 50%
+	display: block
+
+	display: flex
+	align-items: center
+
+	background: linear-gradient(129.54deg, #FF7B4E 15.57%, $accent-color 95.03%)
+
+.slider__btn--prev
+	left: -27px
+	padding-left: 24px
+	justify-content: flex-start
+
+.slider__btn--next
+	right: -27px
+	padding-right: 24px
+	justify-content: flex-end
+
+// CUSTOMERS
+
+.customers
+	padding: 100px 0 133px
+
+	&__row
+		display: flex
+		column-gap: 68px
+
+	&__img
+		max-width: 478px
+		img
+			border-radius: 60px
+
+	&__title
+		font-family: $default-font
+		font-size: 45px
+		font-weight: 500
+		padding-bottom: 35px
+
+// REVIEW
+
+.review
+	max-width: 490px
+
+	&__client
+		margin-bottom: 60px
+		display: flex
+		column-gap: 33px
+		align-items: center
+
+	&__client--avatar
+		overflow: hidden
+		width: 134px
+		height: 134px
+		border-radius: 50%
+		background: linear-gradient(129.54deg, #FF7B4E 15.57%, $accent-color 95.03%)
+		filter: drop-shadow(2px 4px 0.4rem rgba(237, 63, 64, 0.5))
+
+	&__client--desc
+		h3
+			font-family: $default-font
+			font-size: 33px
+			font-weight: 500
+			margin-bottom: 10px
+		p
+			font-family: $default-font
+			font-size: 25px
+			font-weight: 400
+			color: $secondary
+	&__text
+		margin-bottom: 30px
+		color: $secondary
+		font-family: $default-font
+		font-size: 22px
+		font-weight: 500
+
+// CTA
+
+.cta
+	padding: 100px 0
+
+	&__plate
+		position: relative
+		background-color: #fff
+		border-radius: 60px
+		display: flex
+		flex-direction: column
+		align-items: center
+		justify-content: center
+		min-height: 580px
+		padding: 40px 15px
+		&::before
+			content: ""
+			position: absolute
+			width: 62px
+			height: 83px
+			left: 74px
+			bottom: 56px
+			background-image: url("../img/cta/cta-el-02.svg")
+		&::after
+			content: ""
+			position: absolute
+			width: 62px
+			height: 83px
+			top: 74px
+			right: 80px
+			background-image: url("../img/cta/cta-el-01.svg")
+
+	&__title
+		text-align: center
+		font-family: $default-font
+		font-size: 45px
+		font-weight: 500
+		padding-bottom: 30px
+
+	&__text
+		font-family: $default-font
+		font-size: 30px
+		font-weight: 500
+		color: $secondary
+		padding-bottom: 60px
+
+	&__btn
+		font-size: 20px
+		padding: 25px 55px
+		border-radius: 27px
+
+// SUBSCRIBE
+
+.subscribe
+	padding: 35px 0 50px
+
+	&__content
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-align: center
+
+	&__title
+		max-width: 494px
+		font-family: $default-font
+		font-size: 55px
+		font-weight: 600
+		margin-bottom: 60px
+
+	&-form
+		padding: 12px 15px 12px 46px
+		background-color: #fff
+		border-radius: 35px
+
+		display: flex
+		column-gap: 20px
+
+	&-form__input
+		font-family: $default-font
+		font-size: 24px
+		font-weight: 500
+
+	&-form__btn
+		padding: 34px 86px
+		font-size: 25px
+		font-weight: 700
+		border-radius: 35px
+
+// FOOTER
+.nav__list--footer
+	padding: 56px 0 56px
+	a
+		color: $secondary
+
+.login--footer
+	color: $secondary
+
+/* Menu Icon */
+
+.menu-icon-wrapper
+	height: 30px
+	width: 40px
+	display: flex
+	justify-content: center
+	align-items: center
+
+.menu-icon
+	position: relative
+	width: 40px
+	height: 4px
+	background-color: $accent-color
+	&::before, &::after
+		content: ''
+		display: block
+		position: absolute
+		left: 0
+		width: 40px
+		height: 4px
+		background-color: $accent-color
+		transition: transform 0.1s ease-in, top 0.1s linear 0.1s
+
+	&::before
+		top: -8px
+
+	&::after
+		top: 8px
+
+	&.menu-icon--active
+		background-color: transparent
+		&::before,&::after
+			top: 0
+			transition: top 0.1s linear, transform 0.1s ease-in 0.1s
+
+		&::before
+			transform: rotate(45deg)
+
+		&::after
+			transform: rotate(-45deg)
+
+// Modal window
+
+.modal
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 1050
+	display: none
+	width: 100%
+	height: 100%
+	overflow: hidden
+	background-color: rgba(0, 0, 0, 0.5)
+
+.modal__dialog
+	max-width: 310px
+	margin: 60px auto
+
+.modal__login
+	position: relative
+	width: 100%
+	padding: 40px 0 40px
+	background: linear-gradient(132.05deg, rgba(66, 142, 95, 0.8) -17.38%, rgba(17, 33, 32, 0.8) 78.4%)
+	filter: drop-shadow(2px 4px 0.4rem rgba(237, 63, 64, 0.5))
+
+	border: 1px solid rgba(0, 0, 0, 0.2)
+	border-radius: 20px
+	overflow-y: auto
+
+.modal__close
+	position: absolute
+	top: 8px
+	right: 14px
+	font-size: 30px
+	color: $accent-color
+	opacity: 0.9
+	font-weight: 700
+	border: none
+	background-color: transparent
+	cursor: pointer
+
+.modal__title
+	font-family: $default-font
+	text-align: center
+	font-size: 22px
+	text-transform: uppercase
+
+.modal__input
+	display: block
+	margin: 20px auto 20px
+	width: 280px
+	height: 50px
+	background: rgba(255, 255, 255, 0.578)
+	border-radius: 15px
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2)
+	border: none
+	font-family: $default-font
+	font-size: 18px
+	text-align: center
+	padding: 0 20px
+
+.btn--modal
+	display: block
+	margin: 0 auto
+	font-size: 22px
+	width: 280px
+	padding: 15px 0 15px
+	border-radius: 15px
+
+.modal-singUp
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 1050
+	display: none
+	width: 100%
+	height: 100%
+	overflow: hidden
+	background-color: rgba(0, 0, 0, 0.5)
+
+.modal__dialog
+	max-width: 310px
+	margin: 60px auto
+
+.modal__singUp
+	position: relative
+	width: 100%
+	padding: 40px 0 40px
+	background: linear-gradient(132.05deg, rgba(66, 142, 95, 0.8) -17.38%, rgba(17, 33, 32, 0.8) 78.4%)
+	filter: drop-shadow(2px 4px 0.4rem rgba(237, 63, 64, 0.5))
+
+	border: 1px solid rgba(0, 0, 0, 0.2)
+	border-radius: 20px
+	overflow-y: auto
+
+.modal__close
+	position: absolute
+	top: 8px
+	right: 14px
+	font-size: 30px
+	color: $accent-color
+	opacity: 0.9
+	font-weight: 700
+	border: none
+	background-color: transparent
+	cursor: pointer
+
+.modal__title
+	font-family: $default-font
+	text-align: center
+	font-size: 22px
+	text-transform: uppercase
+
+.modal__input
+	display: block
+	margin: 20px auto 20px
+	width: 280px
+	height: 50px
+	background: rgba(255, 255, 255, 0.578)
+	border-radius: 15px
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2)
+	border: none
+	font-family: $default-font
+	font-size: 18px
+	text-align: center
+	padding: 0 20px
+
+.btn--modal
+	display: block
+	margin: 0 auto
+	font-size: 22px
+	width: 280px
+	padding: 15px 0 15px
+	border-radius: 15px
+
+.show
+	display: block
+
+.hide
+	display: none
+
+.animate--graphic
+	animation: 2s infinite alternate movingImg
+
+@keyframes movingImg
+	form
+		-webkit-transform: translate(0,0)
+
+	to 
+		-webkit-transform: translate(15px, 5px)
