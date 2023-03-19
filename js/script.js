@@ -20,6 +20,9 @@ window.addEventListener('DOMContentLoaded', () => {
 		modal.classList.add("show");
 		modal.classList.remove("hide");
 		document.body.style.overflow = "hidden";
+
+		nav.classList.remove('nav--mobile');
+		menuIcon.classList.remove('menu-icon--active');
 	
 		console.log(modalTimerId);
 	
