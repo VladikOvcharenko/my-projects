@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		modal.classList.add("hide");
 		modal.classList.remove("show");
 		document.body.style.overflow = "";
+		document.body.classList.remove('no-scroll');
 	}
 	
 	function openModal(modalSelector, modalTimerId) {
